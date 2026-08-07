@@ -2,6 +2,29 @@
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" title="Java" alt="Java" width="40" height="40"/>&nbsp; <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg" title="Spring Boot" alt="Spring Boot" width="40" height="40"/>&nbsp;
 </h1>
 
+<h2 align="center">👨🏻‍💻 Autor do Repositório: </h2>
+
+<div align="center">
+<strong>Lucas Paguetti Pereira🦇</strong><br>
+Instituição: <strong>Cesar School🏫</strong><br>
+Recife, Pernambuco — <strong>Brazil🇧🇷</strong><br>
+<a href="https://www.instagram.com/lucpaguetti/">
+  <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+</a>
+<a href="https://github.com/wqiluc">
+  <img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=white">
+</a>
+<a href="https://www.linkedin.com/in/lucas-paguetti-pereira-70267339b/">
+  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white">
+</a> <br>
+<a href="mailto:lpp2@cesar.school">
+  <img src="https://img.shields.io/badge/Email-lpp2%40cesar.school-FFA500?style=for-the-badge&logo=gmail&logoColor=white">
+</a>
+<a href="https://discord.com/users/lucaspaguettipereira">
+  <img src="https://img.shields.io/badge/Discord-lucaspaguettipereira-5865F2?style=for-the-badge&logo=discord&logoColor=white">
+</a>
+</div>
+
 <h2 align="center">💻⛏️ Ferramentas e Tecnologias Utilizadas: <br></h2>
 
 <p align="center">
