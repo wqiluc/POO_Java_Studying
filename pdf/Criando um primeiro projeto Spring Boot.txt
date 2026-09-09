@@ -1,0 +1,66 @@
+# Preparação do ambiente:
+
+baixar e instalar o Java: adoptium.net (open JDK)
+baixar e instalar o VS Code: code.visualstudio.com
+baixar e instalar o Git: git-scm.com
+
+Para confirmar se está instalado:
+java --version
+git --version
+
+Instalar as extensões do VS Code:
+Extension pack for Java  (Microsoft)
+Spring Boot extension pack (VMWare)
+
+
+# Criando o projeto Spring Boot:
+
+CTRL + SHIFT + P, escolha Spring initializr: Create a Maven project
+Escolha a versão do Spring boot (atualmente, 4.0.3)
+Escolha Java
+Coloque o group ID (ex: br.com.minhaempresa)
+Coloque o Artifact Id (ex: primeiroexemplo)
+Escolha Jar
+Escolha versão 17
+Inclua o Spring web
+informe a pasta para gerar o projeto
+Após gerar o projeto, abra no VS Code
+
+
+# Rodando o projeto:
+
+execute o projeto. 
+
+Abra o navegador e digite a URL: http://localhost:8080
+
+Você verá uma whitelabel page, porque não há ainda nenhum controlador com rotas definidas.
+
+
+# Definindo uma rota.
+
+Vamos criar um controlador.
+
+No mesmo local onde está a classe PrimeiroExemploApplication, crie a classe HelloController.
+
+Apague o conteúdo dela e substitua pelo conteúdo a seguir:
+
+package br.com.minhaempresa.primeiroexemplo;
+
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.GetMapping;
+
+
+@RestController
+public class HelloController {
+
+    @GetMapping("/hello")
+    public String Hello()  {
+        return "Bem vindo ao Spring Boot";
+    }
+    
+}
+
+
+Pare a execução do projeto e execute novamente.
+
+Acesse a URL: http://localhost:8080/hello e veja a mensagem de saudação.

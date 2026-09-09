@@ -9,7 +9,6 @@ folha de revisão — sintaxe e conceitos</h1>
   <img alt="Status" src="https://img.shields.io/badge/status-em%20andamento-yellow">
   <img alt="License" src="https://img.shields.io/github/license/wqiluc/POO_Java_Studying">
   <img alt="Last commit" src="https://img.shields.io/github/last-commit/wqiluc/POO_Java_Studying">
-  <img alt="Repo size" src="https://img.shields.io/github/repo-size/wqiluc/POO_Java_Studying">
 </p>
 
 Referência de consulta rápida, não leitura sequencial. Use o sumário pra
