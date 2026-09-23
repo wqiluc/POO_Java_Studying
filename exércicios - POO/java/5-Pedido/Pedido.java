@@ -1,56 +1,64 @@
 /*
  * Exercício 5
  * Classe Pedido com encapsulamento: atributos private + getters/setters.
- */
+*/
+
 public class Pedido 
 {
+    private int numero_pedido;
+    private String nome_cliente;
+    private Float valor_pedido;
 
-    private int numeroPedido;
-    private String nomeCliente;
-    private double valorTotal;
-
-    public Pedido(int numeroPedido, String nomeCliente, double valorTotal) 
+    public Pedido(int numero_pedido, String nome_cliente, Float valor_pedido)
     {
-        this.numeroPedido = numeroPedido;
-        this.nomeCliente = nomeCliente;
-        this.valorTotal = valorTotal;
+        this.nome_cliente = nome_cliente;
+        this.numero_pedido = numero_pedido;
+        this.valor_pedido = valor_pedido;
     }
 
-    public int getNumeroPedido() 
+    public int getNumeroPedido()
     {
-        return numeroPedido;
+        return numero_pedido;
     }
 
-    public void setNumeroPedido(int numeroPedido) 
+    public void setNumeroPedido(int numero_pedido)
     {
-        this.numeroPedido = numeroPedido;
+        this.numero_pedido = numero_pedido;
     }
 
-    public String getNomeCliente() 
+    public String getNomeCliente()
     {
-        return nomeCliente;
+        return nome_cliente;
     }
 
-    public void setNomeCliente(String nomeCliente) 
+    public void setNomeCliente(String nome_cliente)
     {
-        this.nomeCliente = nomeCliente;
+        this.nome_cliente = nome_cliente;
     }
 
-    public double getValorTotal() 
+    public Float getValorPedido()
     {
-        return valorTotal;
+        return valor_pedido;
     }
 
-    public void setValorTotal(double valorTotal) 
+    public void setValorPedido(Float valor_pedido)
     {
-        this.valorTotal = valorTotal;
+        this.valor_pedido = valor_pedido;
     }
 
-    public static void main(String[] args) 
+    public static void main(String[] args)
     {
-        Pedido pedido = new Pedido(1, "Lucas", 250.90);
-        System.out.println("Pedido #" + pedido.getNumeroPedido()
-                + " - Cliente: " + pedido.getNomeCliente()
-                + " - Total: " + pedido.getValorTotal());
+        Pedido p = new Pedido(1, "Lucas", 180f);
+        System.out.println("\n\t Pedido nº " + p.getNumeroPedido());
+        System.out.println("Nome do Cliente " + p.getNomeCliente());
+        System.out.println("Valor do Pedido: R$ " + p.getValorPedido());
+
+        p.setValorPedido(180.50f);
+
+        System.out.println("Novo valor: R$ " + p.getValorPedido());
+
+        System.out.println("\nResumo final -> Pedido nº " + p.getNumeroPedido()
+                + " | Cliente: " + p.getNomeCliente()
+                + " | Valor: R$ " + p.getValorPedido());
     }
 }

@@ -2,78 +2,70 @@
  * Exercício 6
  * Classe Veiculo com encapsulamento: atributos private + getters/setters.
  */
-public class Veiculo 
+
+public class Veiculo
 {
-    private String placa;
-    private String nomeDono;
-    private String modelo;
-    private String fabricante;
-    private double valorMercado;
+    private String nome_veiculo;
+    private String nome_marca;
+    private String cor_veiculo;
+    private Float preco_veiculo;
 
-    public Veiculo(String placa, String nomeDono, String modelo, String fabricante, double valorMercado) 
+    public Veiculo(String nome_veiculo, String nome_marca, String cor_veiculo, Float preco_veiculo)
     {
-        this.placa = placa;
-        this.nomeDono = nomeDono;
-        this.modelo = modelo;
-        this.fabricante = fabricante;
-        this.valorMercado = valorMercado;
+        this.nome_veiculo = nome_veiculo;
+        this.nome_marca = nome_marca;
+        this.cor_veiculo = cor_veiculo;
+        this.preco_veiculo = preco_veiculo;
     }
 
-    public String getPlaca() 
+    public String getNomeVeiculo()
     {
-        return placa;
+        return nome_veiculo;
     }
 
-    public void setPlaca(String placa) 
+    public void setNomeVeiculo(String nome_veiculo)
     {
-        this.placa = placa;
+        this.nome_veiculo = nome_veiculo;
     }
 
-    public String getNomeDono() 
+    public String getNomeMarca()
     {
-        return nomeDono;
+        return nome_marca;
     }
 
-    public void setNomeDono(String nomeDono) 
+    public void setNomeMarca(String nome_marca)
     {
-        this.nomeDono = nomeDono;
+        this.nome_marca = nome_marca;
     }
 
-    public String getModelo() 
+    public String GetCorVeiculo()
     {
-        return modelo;
+        return cor_veiculo;
     }
 
-    public void setModelo(String modelo) 
+    public void SetCorVeiculo(String cor_veiculo)
     {
-        this.modelo = modelo;
+        this.cor_veiculo = cor_veiculo;
     }
 
-    public String getFabricante() 
+    public Float setPrecoVeiculo()
     {
-        return fabricante;
+        return preco_veiculo;
     }
 
-    public void setFabricante(String fabricante) 
+    public void getPrecoVeiculo(Float preco_veiculo)
     {
-        this.fabricante = fabricante;
+        this.preco_veiculo = preco_veiculo;
     }
 
-    public double getValorMercado() 
+    public static void main(String[] args)
     {
-        return valorMercado;
-    }
+        Veiculo veiculo = new Veiculo("Civic", "Honda", 
+        "Prata", 120000.00f);
 
-    public void setValorMercado(double valorMercado) 
-    {
-        this.valorMercado = valorMercado;
-    }
-
-    public static void main(String[] args) 
-    {
-        Veiculo carro = new Veiculo("ABC1D23", "Lucas", "Civic", "Honda", 120000.00);
-        System.out.println(carro.getModelo() + " (" + carro.getFabricante() + ") - Placa: "
-                + carro.getPlaca() + " - Dono: " + carro.getNomeDono()
-                + " - Valor: " + carro.getValorMercado());
+        System.out.println("Veículo: " + veiculo.getNomeVeiculo());
+        System.out.println("Marca: " + veiculo.getNomeMarca());
+        System.out.println("Cor: " + veiculo.GetCorVeiculo());
+        System.out.println("Preço: " + veiculo.setPrecoVeiculo());
     }
 }
