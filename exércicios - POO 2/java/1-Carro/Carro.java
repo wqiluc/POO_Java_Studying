@@ -12,21 +12,23 @@
  *
  * No main, crie 2 carros, preencha os atributos diretamente, acelere e freie
  * cada um, e teste os limites (acelerar 250 e frear 300).
- */
-
+*/
 
 public class Carro 
 {
     private String marca_veiculo;
+    private String modelo_veiculo;
     private int ano_veiculo;
-    private double velocidade_atual_veiculo;
+    private double velocidade_veiculo;
 
 
-    public Carro(String marca_veiculo, int ano_veiculo, double velocidade_atual_veiculo)
+    public Carro(String marca_veiculo, String modelo_veiculo, 
+    int ano_veiculo, double velocidade_veiculo)
     {
         this.marca_veiculo = marca_veiculo;
+        this.modelo_veiculo = modelo_veiculo;
         this.ano_veiculo = ano_veiculo;
-        this.velocidade_atual_veiculo = 0;
+        this.velocidade_veiculo = 0;
     }
 
     public String getMarcaVeiculo()
@@ -39,6 +41,16 @@ public class Carro
         this.marca_veiculo = marca_veiculo;
     }
 
+    public String getModeloVeiculo()
+    {
+        return modelo_veiculo;
+    }
+
+    public void setModeloVeiculo(String modelo_veiculo)
+    {
+        this.modelo_veiculo = modelo_veiculo;
+    }
+    
     public int getAnoVeiculo()
     {
         return ano_veiculo;
@@ -49,74 +61,69 @@ public class Carro
         this.ano_veiculo = ano_veiculo;
     }
 
-
     public double getVelocidadeVeiculo()
     {
-        return velocidade_atual_veiculo;
+        return velocidade_veiculo;
     }
 
-    public void setVelocidadeVeiculo(double velocidade_atual_veiculo)
+    public void Acelerar(double valor)
     {
-        this.velocidade_atual_veiculo = 0;
-    }
-
-    public void AcelerarVeiculo(double valor)
-    {
-        velocidade_atual_veiculo+=valor;
-
-        if (velocidade_atual_veiculo>200)
+        if(valor <= 0)
         {
-            velocidade_atual_veiculo = 200;
-            System.out.println("Você está excedendo o limite de velocidade! Cuidado");
+            System.out.println("Valor Inválido!! Digite uma aceleração Válida!");
+            return;
+        }
+
+        velocidade_veiculo += valor;
+
+        if(velocidade_veiculo > 200)
+        {
+            velocidade_veiculo = 200;
+            System.out.println("Limite de 200 km/h atingido!");
         }
     }
 
-    public void FrearVeiculo(double valor)
+    public void Frear(double valor)
     {
-        velocidade_atual_veiculo-=valor;
-
-        if (velocidade_atual_veiculo == 0)
+        if(valor <= 0)
         {
-            System.out.println("Você parou totalmente o Veículo! ✅");
+            System.out.println("Valor Inválido!! Digite uma frenagem Válida!");
+            return;
         }
-        else if (velocidade_atual_veiculo < 0)
+
+        velocidade_veiculo -= valor;
+
+        if(velocidade_veiculo < 0)
         {
-            velocidade_atual_veiculo = 0;
-            System.err.println("Você NÃO PODE ter uma velocidade negativa ❌");
+            velocidade_veiculo = 0;
+            System.out.println("O veículo parou!");
         }
     }
 
-    public void exibirStatus()
+    public void ExibirStatus()
     {
-        System.out.println(getMarcaVeiculo() + " (" + getAnoVeiculo() + ") a " + getVelocidadeVeiculo() + " km/h");
+        System.out.println(marca_veiculo + " " + modelo_veiculo + " (" + ano_veiculo + ") a " + velocidade_veiculo + " km/h");
     }
-
-    public String toString()
-    {
-        return "Modelo do Veículo: " + getMarcaVeiculo() + 
-        " | Ano de lançamento: " + getAnoVeiculo();
-    }
-
+    
     public static void main(String[] args) 
     {
-        Carro c = new Carro("Toyota Corolla", 2022, 0);
-        Carro c2 = new Carro("Honda Civic", 2020, 0);
+        Carro c1 = new Carro("Toyota", "Corolla", 2022, 0);
+        Carro c2 = new Carro("Honda", "Civic", 2020, 0);
 
-        c.setVelocidadeVeiculo(0);
-        c2.setVelocidadeVeiculo(0);
+        c1.Acelerar(80);
+        c1.ExibirStatus();
+        c1.Frear(30);
+        c1.ExibirStatus();
 
-        c.AcelerarVeiculo(80);
-        c.FrearVeiculo(30);
-        c.exibirStatus();
+        c2.Acelerar(120);
+        c2.ExibirStatus();
+        c2.Frear(50);
+        c2.ExibirStatus();
 
-        c2.AcelerarVeiculo(120);
-        c2.FrearVeiculo(50);
-        c2.exibirStatus();
-
-        c.AcelerarVeiculo(250);
-        c.exibirStatus();
-
-        c2.FrearVeiculo(300);
-        c2.exibirStatus();
+        // Testando os limites
+        c1.Acelerar(250);
+        c1.ExibirStatus();
+        c2.Frear(300);
+        c2.ExibirStatus();
     }
 }
