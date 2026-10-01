@@ -47,23 +47,33 @@ public class Candidato2026
 
     public static void main(String[] args)
     {
-        String[] nomes = {"Lula", "Renan", "Flávio", "Cury"};
-        int[] numeros = {13, 14, 22, 70};
+        Candidato2026 lula = new Candidato2026();
+        lula.setNumeroCandidato(13);
+        lula.setNomeCandidato("Lula");
+        lula.setTotalVotosCandidatos(0);
 
-        Candidato2026[] candidatos = new Candidato2026[4];
+        Candidato2026 renan = new Candidato2026();
+        renan.setNumeroCandidato(14);
+        renan.setNomeCandidato("Renan");
+        renan.setTotalVotosCandidatos(0);
 
-        for (int indice_candidato = 0; indice_candidato < 4; indice_candidato++)
-        {
-            candidatos[indice_candidato] = new Candidato2026();
-            candidatos[indice_candidato].setNumeroCandidato(numeros[indice_candidato]);
-            candidatos[indice_candidato].setNomeCandidato(nomes[indice_candidato]);
-            candidatos[indice_candidato].setTotalVotosCandidatos(0);
-        }
+        Candidato2026 flavio = new Candidato2026();
+        flavio.setNumeroCandidato(22);
+        flavio.setNomeCandidato("Flávio");
+        flavio.setTotalVotosCandidatos(0);
 
-        for (Candidato2026 c : candidatos)
-        {
-            System.out.println(c.getNumeroCandidato() + " - " + c.getNomeCandidato()
-                + ": " + c.getTotalVotosCandidato() + " votos");
-        }
+        Candidato2026 cury = new Candidato2026();
+        cury.setNumeroCandidato(70);
+        cury.setNomeCandidato("Cury");
+        cury.setTotalVotosCandidatos(0);
+
+        System.out.println(lula.getNumeroCandidato() + " - " + lula.getNomeCandidato()
+            + ": " + lula.getTotalVotosCandidato() + " votos");
+        System.out.println(renan.getNumeroCandidato() + " - " + renan.getNomeCandidato()
+            + ": " + renan.getTotalVotosCandidato() + " votos");
+        System.out.println(flavio.getNumeroCandidato() + " - " + flavio.getNomeCandidato()
+            + ": " + flavio.getTotalVotosCandidato() + " votos");
+        System.out.println(cury.getNumeroCandidato() + " - " + cury.getNomeCandidato()
+            + ": " + cury.getTotalVotosCandidato() + " votos");
     }
 }

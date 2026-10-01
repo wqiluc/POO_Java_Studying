@@ -26,7 +26,7 @@ public class Par<K, V>
         return valor;
     }
 
-    @Override // anotação de sobreescrita
+    @Override 
     public String toString()
     {
         return "(" + chave + ", " + valor + ")";
